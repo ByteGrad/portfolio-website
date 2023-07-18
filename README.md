@@ -1,6 +1,6 @@
 [![Watch tutorial here](https://img.youtube.com/vi/4ZgGr8yg3RE/0.jpg)](https://youtu.be/4ZgGr8yg3RE)
 
-[Watch video here](https://youtu.be/4ZgGr8yg3RE)
+# [Watch video here](https://youtu.be/4ZgGr8yg3RE)
 
 ## What you will learn
 
