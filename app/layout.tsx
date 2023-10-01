@@ -7,12 +7,31 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
-
+import { Metadata } from "next"; // if using TypeScript
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Markus | Personal Portfolio",
-  description: "Markus is a Murex consultant with 20+ years of experience.",
+export const metadata: Metadata = {
+  openGraph: {
+    title: "Markus | Murex Consultant",
+    description: "Markus is a Murex consultant with 20+ years of experience.",
+    url: "https://linke.de",
+    siteName: "Next.js",
+    images: [
+      {
+        url: "https://res.cloudinary.com/ddnfxz7wl/image/upload/f_auto,q_auto,w_800/v1/Linke.de/linke-website",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "https://res.cloudinary.com/ddnfxz7wl/image/upload/f_auto,q_auto,w_1800/v1/Linke.de/linke-website",
+        width: 1800,
+        height: 1600,
+        alt: "linke.de Website Screenshot",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
