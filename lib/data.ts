@@ -71,7 +71,7 @@ export const experiencesData = [
     title: "Murex Technical Lead",
     location: "Amsterdam, Netherlands",
     description:
-      "Intially I was implementing new MxML-interfaces but then was asked to implement the move of the Mx.3 application from the datacenter in Singapore to Amsterdam. Part of this was a lot of refactoring, including a full rewrite of the EOD processes. After successfully compling this I became technical lead and moved from Development to Support.",
+      "Intially I was implementing new MxML-interfaces but then was asked to implement the move of the Mx.3 application from the datacenter in Singapore to Amsterdam. Part of this was a lot of refactoring, including a full rewrite of the EOD processes. After successfully completing this I became technical lead and moved from Development to Support.",
     icon: React.createElement(CgWorkAlt),
     date: "2010 - 2015",
   },
