@@ -54,7 +54,7 @@ export default function Intro() {
 
       <motion.h1 className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }}>
         <span className="font-bold">Hello, I'm Markus.</span> I'm a <span className="font-bold">Murex Consultant</span> with <span className="font-bold">20+ years</span> of experience. I enjoy
-        managing <span className="italic">complex applications and environments</span>. My focus is on <span className="underline">all technical aspects</span> of a Murex implementation.
+        managing <span className="italic">complex applications and environments</span>. My focus is on all technical aspects of a <span className="underline">Murex implementation</span>.
       </motion.h1>
 
       <motion.div
