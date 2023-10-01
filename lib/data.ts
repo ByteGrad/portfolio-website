@@ -154,9 +154,11 @@ export const skillsData = [
   "Jenkins",
   "ITIL",
   "Perl",
+  "GoLang",
   "SQL",
   "(Python)",
   "(React)",
+  "(Typescript)",
   "(Next.js)",
   "(TailwindCSS)",
 
