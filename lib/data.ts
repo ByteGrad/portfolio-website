@@ -111,9 +111,9 @@ export const experiencesData = [
     title: "Senior Murex Consultant",
     location: "Singapore",
     description:
-      "Catching up with old colleagues from my time at Murex, I joined the team at this bank in Singapore. Im involved with technological improvements like high performance computing (grid computing), database virtualization and similar initiatives.",
+      "Catching up with old colleagues from my time at Murex, I've joined the team at the bank in Singapore. 'I'm involved with technological improvements like high performance computing (grid computing), database virtualization and similar initiatives.",
     icon: React.createElement(CgWorkAlt),
-    date: "2020 - 2023",
+    date: "since 2023",
   },
 ] as const;
 
