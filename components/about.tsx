@@ -15,34 +15,29 @@ export default function About() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      id="about"
-    >
+      id="about">
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        With over two decades of extensive experience in the <span className="font-medium">global financial industry</span>, I have had the privilege of working with numerous major banks and financial
+        institutions across the world. My journey began in 1998, and since then, I have held positions at BGB, HBOS, ABN, RBC, SAC, BEAR, CS, ING, SEB, TALANX, NBC, and UOB.
+      </p>
+      <p className="mb-3">
+        My professional background has enabled me to serve Murex customers, including banks, hedge funds, asset managers, and insurance companies. I have also provided my expertise to consulting firms
+        such as Accenture and Exclian/Luxoft. Over the years, I have taken on a variety of roles, including System Architecture, Design and <span className="font-medium">Environment Management</span>,
+        Marketdata, Integration, Architect, EOD Refactoring, Datacenter Move, Cloud Migration, Support, <span className="font-medium">Tech Lead</span>, Scrum Master, Product Owner, Application Owner,
+        and Support Manager.
+      </p>
+      <p className="mb-3">
+        As a testament to my commitment to the Murex community, I founded the <span className="font-medium">Murex User Group</span>, which has grown into a thriving network of over 3,800 Murex
+        professionals worldwide. My passion for innovation and technology led me to design and develop TradeDB, a universal interface system for Murex that streamlines exchanges, trades, and static
+        data management. Additionally, I created MxENV, a system specifically designed to manage Murex environments, including development, testing, pre-production, and production stages. With a
+        proven track record in the financial sector and a strong dedication to the Murex community, I am excited to continue contributing to the growth and development of innovative financial
+        solutions worldwide.
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        <span className="italic">When I'm not working</span>, I enjoy travelling, watching movies, and programming. I also enjoy <span className="font-medium">learning new things</span>. I am
+        currently learning about <span className="font-medium">full stack development</span>.
       </p>
     </motion.section>
   );
