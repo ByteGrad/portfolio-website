@@ -6,6 +6,8 @@ import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/server";
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/server";
+import UserProfile from "@/components/UserProfile";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <Contact />
       <LoginLink>Sign in</LoginLink>
       <RegisterLink>Sign up</RegisterLink>
+      <LogoutLink>Sign out</LogoutLink>
+      <UserProfile />
     </main>
   );
 }
