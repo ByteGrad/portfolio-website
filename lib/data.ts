@@ -53,7 +53,7 @@ export const experiencesData = [
   },
   {
     title: "Murex MxML and Market Data Developer",
-    location: "Paris, France",
+    location: "Paris, France and New York, USA",
     description:
       "When joining Murex (vendor) in Paris I was taking care of one of the first Murex Mx.3 implementations for a large Dutch bank. As the online on-site resource I was the link between the on-location team and the vendor. After completion I worked on several other projects, mainly as an MxML and Market Data Developer.",
     icon: React.createElement(CgWorkAlt),
@@ -76,6 +76,14 @@ export const experiencesData = [
     date: "2010 - 2015",
   },
   {
+    title: "Global Murex Support Lead",
+    location: "Stockholm, Sweden",
+    description:
+      "Managing the Murex FX technical and functional support, which included development and configuration management. Leading a team of 24 professionals, employing Agile/Scrum methodologies to ensure streamlined processes and effective collaboration. Establishing Murex support structures to enhance system performance and reliability",
+    icon: React.createElement(CgWorkAlt),
+    date: "2015 - 2016",
+  },
+  {
     title: "Murex Environment Manager",
     location: "Köln, Deutschland",
     description:
@@ -95,7 +103,7 @@ export const experiencesData = [
     title: "Technical Lead Murex Practise",
     location: "Stockholm, Sweden",
     description:
-      "We visited all Murex clients in the Nordic region and talked about common challanges and how to solve them. This was an interesting role, but after a year I decided to move to Asia.",
+      "We visited all Murex clients in the Nordic region and talked about common challanges and how to solve them.",
     icon: React.createElement(CgWorkAlt),
     date: "2019 - 2020",
   },

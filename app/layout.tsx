@@ -7,9 +7,9 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
-import { Metadata } from "next"; // if using TypeScript
 const inter = Inter({ subsets: ["latin"] });
 
+import { Metadata } from "next"; // if using TypeScript
 export const metadata: Metadata = {
   openGraph: {
     title: "Markus | Murex Consultant",
