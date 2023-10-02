@@ -1,4 +1,5 @@
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { LogoutLink, getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/server";
 
 const UserProfile = async () => {
   const { getUser, isAuthenticated } = getKindeServerSession();
@@ -9,9 +10,14 @@ const UserProfile = async () => {
     <div>
       <h2>{user.given_name}</h2>
       <p>{user.email}</p>
+      <LogoutLink>Sign out</LogoutLink>
     </div>
   ) : (
-    <p>Please sign in or register!</p>
+    <p>
+      <LoginLink>Sign in</LoginLink>
+      <br />
+      <RegisterLink>Sign up</RegisterLink>
+    </p>
   );
 };
 
