@@ -13,11 +13,9 @@ const UserProfile = async () => {
       <LogoutLink>Sign out</LogoutLink>
     </div>
   ) : (
-    <p>
-      <LoginLink>Sign in</LoginLink>
-      <br />
-      <RegisterLink>Sign up</RegisterLink>
-    </p>
+    <small className="mb-2 block text-xs px-4 text-center text-gray-500">
+      <LoginLink>Sign in</LoginLink> or <RegisterLink>Sign up</RegisterLink>
+    </small>
   );
 };
 
