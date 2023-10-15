@@ -9,7 +9,7 @@ interface DropdownProps {
 
 function Dropdown({ items, onSelect }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const maxHeight = Math.min(items.length, 5) * 30
+  const maxHeight = Math.min(items.length, 5)*3;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -22,7 +22,7 @@ function Dropdown({ items, onSelect }: DropdownProps) {
       </button>
       <br />
       {isOpen && (
-        <ul className="justify-center gap-2 text-lg text-gray-800" style={{ maxHeight: `${maxHeight* 2}px`, overflowY: 'scroll', width: '100%'}}>
+        <ul className="justify-center gap-2 text-lg text-gray-800" style={{ maxHeight: `${maxHeight}rem`, overflowY: 'scroll', width: '100%'}}>
           {items.map((item, idx) => {
             const date = String(new Date(item.created_at)).split('(')[0];
             const parse = `${item.name} "${item.message}" ${date}`;
