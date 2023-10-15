@@ -27,7 +27,7 @@ function Dropdown({ items, onSelect }: DropdownProps) {
             const date = String(new Date(item.created_at)).split('(')[0];
             const parse = `${item.name} "${item.message}" ${date}`;
             return (
-            <li key={idx} onClick={() => { onSelect(parse); setIsOpen(false) }} className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80">
+            <li key={idx} onClick={() => { onSelect(parse); setIsOpen(false) }} className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 cursor-pointer">
               {parse}
             </li>
           )
