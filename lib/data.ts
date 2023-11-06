@@ -64,7 +64,7 @@ export const projectsData = [
   {
     title: "Sportevie",
     description:
-      "I developped a full-stack site on this startup project for 2 years. Athletes can start their membership and get a discount just for using the.",
+      "I developped a full-stack site on this startup project for 2 years. Athletes can start their membership and get a discount just for using the app.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
     imageUrl: siteinho,
   },
