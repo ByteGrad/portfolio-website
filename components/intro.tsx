@@ -9,7 +9,7 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import omar from "./omar.jpeg";
+import omar from "./omar.jpg";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
