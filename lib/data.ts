@@ -1,10 +1,10 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import { TfiBookmarkAlt } from "react-icons/tfi";
+import { FaCode } from "react-icons/fa6";
+import { MdAnchor } from "react-icons/md";
+import pomello from "@/public/Pomello.png";
+import sonar from "@/public/sonar.jpeg";
+import naver from "@/public/Naver.png";
 
 export const links = [
   {
@@ -35,73 +35,70 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Optimization / Deep Learning Researcher,\nadvised by Prof. Suman Jana",
+    location: "New York, NY",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "1) Calculus/Optimization over programs for automated bug finding, dataflow tracking, or exploit generation. Questions include: how to compute a derivative over a program? How can we do it efficiently? What are other applications?\n2) Deep learning models for program analysis. Questions include: how to teach neural networks to read/write/understand Program? What is a good neural architecture ? ",
+    icon: React.createElement(TfiBookmarkAlt),
+    date: "2021",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Submarine Force Command, Squad Leader",
+    location: "Jinhae, Korea",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Served in the Submarine Force Command assisting 10+ Board of Admirals & 15+ military exercises.\nRecognized by the Commander for excellent service record and served as squad leader with 22 crew mates for 9 months.",
+    icon: React.createElement(MdAnchor),
+    date: "2022 - 2023",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Leadership Roles",
+    location: "New York, NY",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "E-board, Columbia Data Science Society: hosted Data science Hackathon, fellowships, and the poker tournament\nE-board, Application Development Initiative: hosted weekly cookies&code meeting and DevFest\nE-board, Korean International Society for Academics and Career: hosted talk shows and conferences regarding recruiting",
+    icon: React.createElement(FaCode),
+    date: "2023 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Pomello AI",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Founded a startup platform that connects seniors to neighbors ran A/B testing for optimal UI design, acquired 3K+ users.",
+    tags: ["Postgres", "Redis", "Typescript", "TypeORM", "React Native"],
+    imageUrl: pomello,
   },
   {
-    title: "rmtDev",
+    title: "Republic of Korea Navy",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Built automatic cataloging system of hydroacoustic signals picked up by the submarine sonobuoys, achieved 87 % accuracy on 2K+ noise samples",
+    tags: ["C++", "Python", "Tensorflow"],
+    imageUrl: sonar,
   },
   {
-    title: "Word Analytics",
+    title: "Naver Corporation",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Developed stock prediction system by implementing LSTM and operated trading pots powered by Deep Reinforcement Learning.",
+    tags: ["Python", "PyTorch", "Numpy", "Java"],
+    imageUrl: naver,
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
+  "Python",
+  "Java",
+  "C",
+  "Rust",
+  "Go.js",
+  "Pytorch",
+  "TensorFlow",
+  "Typescript",
+  "React & React Native",
   "Next.js",
   "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
   "Django",
-  "Framer Motion",
+  "MongoDB",
+  "PostgreSQL",
+  "Flask",
+  "Amazon Web Services",
 ] as const;

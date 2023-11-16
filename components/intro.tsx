@@ -20,7 +20,7 @@ export default function Intro() {
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center mb-10">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -31,13 +31,13 @@ export default function Intro() {
             }}
           >
             <Image
-              src="My_Photo.jpeg"
+              src="/My_Photo.jpeg"
               alt="Ricardo portrait"
               width="192"
               height="192"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-24 w-24 rounded-full object-cover border-[0rem] border-white shadow-xl"
             />
           </motion.div>
 
@@ -58,16 +58,19 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 pt-4 px-4 text-2xl font-medium !leading-[1.5]"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hi, I'm Jinhong.</span> <br/>
-        I'm an undergrad at Columbia University studying CS! I enjoy Software Development and AI/ML Research. 
+        
+        <div className="max-w-[50rem] text-center scroll-mt-[100rem]">
+          <div className=" sm:text-4xl font-bold mb-10">Hi, I'm Jinhong.</div>
+          <div className="sm:text-2xl">I'm an undergrad at Columbia University studying CS! I enjoy Software Development and AI/ML Research.</div>
+        </div>
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium pt-5"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -88,7 +91,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
+          href="/Resume_Jinhong_Min.pdf"
           download
         >
           Download CV{" "}
@@ -97,7 +100,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/jinhong-min-33b1ba1b4/"
           target="_blank"
         >
           <BsLinkedin />
@@ -105,7 +108,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
+          href="https://github.com/jinhongee"
           target="_blank"
         >
           <FaGithubSquare />
