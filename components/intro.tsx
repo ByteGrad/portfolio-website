@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -9,10 +9,27 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { Dropdown, DropdownItem } from "./dropdown";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const [dropdownItems, setDropdownItems] = useState<DropdownItem[]>([])
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const fetchDropdownItems = useCallback(async () => {
+  const response = await fetch("https://mocki.io/v1/2bd8b808-e43a-48cc-bef3-0c50c5c86f11");
+  const dropdownItems = await response.json();
+  setDropdownItems(dropdownItems as DropdownItem[])
+  }, [])
+
+  const toggleDropdown = useCallback(() => {
+    setShowDropdown(current => !current);
+  }, [])
+
+  useEffect(() => {
+    fetchDropdownItems()
+  }, [fetchDropdownItems])
 
   return (
     <section
@@ -97,6 +114,11 @@ export default function Intro() {
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
+        <>
+          {showDropdown && !!dropdownItems.length && (
+            <Dropdown data={dropdownItems} toggleDropdown={toggleDropdown} />
+          )}
+        </>
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
