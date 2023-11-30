@@ -52,7 +52,8 @@ export default function Intro() {
               duration: 0.7,
             }}
           >
-            👋
+            {/* 👋 */}
+            <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif" alt="👋" width="42" height="42" />
           </motion.span>
         </div>
       </div>
