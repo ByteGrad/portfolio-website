@@ -12,7 +12,7 @@ function getYearRange() {
 
 export default function Footer() {
   return (
-    <footer className="mb-10 px-4 text-center text-gray-500">
+    <footer className="px-4 text-center text-gray-500 mb-24 lg:mb-10">
       <small className="mb-2 block text-xs">
         &copy;{" "}
         {`${getYearRange()} ${process.env.NEXT_PUBLIC_FULL_NAME}. All rights reserved.`}
