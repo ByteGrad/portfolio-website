@@ -47,7 +47,11 @@ export default function Contact() {
         ref={formRef}
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
-          const { error } = await sendEmail(formData);
+          const { error, resetForm } = await sendEmail(formData);
+
+          if (resetForm) {
+            formRef.current?.reset();
+          }
 
           if (error) {
             toast.error(error);
@@ -55,10 +59,16 @@ export default function Contact() {
           }
 
           toast.success("Email sent successfully!");
-
-          formRef.current?.reset();
         }}
       >
+        <input
+          className="px-4 rounded-lg border border-black/10 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none opacity-0 absolute bottom-0 left-0 h-0 w-0 z-[-1]"
+          name="fullName"
+          type="text"
+          maxLength={500}
+          placeholder="Your name"
+        />
+
         <label
           htmlFor="email"
           className="text-left mb-1 text-gray-700 dark:text-white/80"

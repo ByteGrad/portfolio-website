@@ -7,9 +7,26 @@ import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendEmail = async (formData: FormData) => {
+class HiddenFieldError extends Error {
+  constructor(message: string = "You have filled out a hidden field") {
+    super(message);
+    this.name = "HiddenFieldError";
+  }
+}
+
+export async function sendEmail(formData: FormData) {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
+
+  // check if this field is filled out; if so, it's probably a bot
+  const hp = formData.get("fullName");
+
+  if (hp) {
+    return {
+      error: new HiddenFieldError().message,
+      resetForm: true
+    };
+  }
 
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
@@ -42,6 +59,7 @@ export const sendEmail = async (formData: FormData) => {
   }
 
   return {
-    data
+    data,
+    resetForm: true
   };
-};
+}
