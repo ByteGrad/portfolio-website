@@ -1,40 +1,42 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
+import toast from "react-hot-toast";
 import { motion } from "framer-motion";
+
+import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
-import toast from "react-hot-toast";
+import { PageSections } from "@/lib/data";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
 
   return (
     <motion.section
-      id="contact"
+      id={PageSections.Contact.id}
       ref={ref}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
       initial={{
-        opacity: 0,
+        opacity: 0
       }}
       whileInView={{
-        opacity: 1,
+        opacity: 1
       }}
       transition={{
-        duration: 1,
+        duration: 1
       }}
       viewport={{
-        once: true,
+        once: true
       }}
     >
       <SectionHeading>Contact me</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
-          example@gmail.com
+        <a className="underline" href={process.env.NEXT_PUBLIC_EMAIL}>
+          {process.env.NEXT_PUBLIC_EMAIL}
         </a>{" "}
         or through this form.
       </p>
@@ -42,7 +44,7 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+          const { error } = await sendEmail(formData);
 
           if (error) {
             toast.error(error);

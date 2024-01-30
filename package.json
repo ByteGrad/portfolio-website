@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write --list-different ."
   },
   "dependencies": {
     "@react-email/components": "^0.0.7",
@@ -28,10 +29,14 @@
     "react-intersection-observer": "^9.5.2",
     "react-vertical-timeline-component": "^3.6.0",
     "resend": "^0.16.0",
+    "sharp": "^0.33.2",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.5"
   },
   "devDependencies": {
-    "@types/react-vertical-timeline-component": "^3.3.3"
+    "@types/react-vertical-timeline-component": "^3.3.3",
+    "eslint-config-prettier": "^9.1.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4"
   }
 }

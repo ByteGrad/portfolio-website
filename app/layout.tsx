@@ -1,21 +1,30 @@
+import { Inter } from "next/font/google";
+import type { Metadata } from 'next'
+import { Toaster } from "react-hot-toast";
+
 import Header from "@/components/header";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
-import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Ricardo | Personal Portfolio",
-  description: "Ricardo is a full-stack developer with 8 years of experience.",
+export const metadata: Metadata = {
+  title: `${process.env.FULL_NAME} | Personal Portfolio`,
+  description: `${process.env.FULL_NAME} is a full-stack software engineer.`,
+  formatDetection: {
+    telephone: false,
+    date: false,
+    address: false,
+    email: false,
+    url: false
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {

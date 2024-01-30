@@ -11,12 +11,12 @@ export default function Project({
   title,
   description,
   tags,
-  imageUrl,
+  imageUrl
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
+    offset: ["0 1", "1.33 1"]
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
@@ -26,7 +26,7 @@ export default function Project({
       ref={ref}
       style={{
         scale: scaleProgess,
-        opacity: opacityProgess,
+        opacity: opacityProgess
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >

@@ -14,34 +14,34 @@ export const sendEmail = async (formData: FormData) => {
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
     return {
-      error: "Invalid sender email",
+      error: "Invalid sender email"
     };
   }
   if (!validateString(message, 5000)) {
     return {
-      error: "Invalid message",
+      error: "Invalid message"
     };
   }
 
   let data;
   try {
     data = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: "bytegrad@gmail.com",
+      from: `Contact Form <${process.env.CONTACT_FORM_EMAIL}>`,
+      to: `${process.env.CONTACT_FORM_EMAIL}`,
       subject: "Message from contact form",
       reply_to: senderEmail,
       react: React.createElement(ContactFormEmail, {
         message: message,
-        senderEmail: senderEmail,
-      }),
+        senderEmail: senderEmail
+      })
     });
   } catch (error: unknown) {
     return {
-      error: getErrorMessage(error),
+      error: getErrorMessage(error)
     };
   }
 
   return {
-    data,
+    data
   };
 };
