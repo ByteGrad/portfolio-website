@@ -59,16 +59,32 @@ export default function Contact() {
           formRef.current?.reset();
         }}
       >
+        <label
+          htmlFor="email"
+          className="text-left mb-1 text-gray-700 dark:text-white/80"
+        >
+          Email:
+        </label>
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          id="email"
+          className="mb-4 h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="senderEmail"
           type="email"
           required
           maxLength={500}
           placeholder="Your email"
         />
+
+
+        <label
+          htmlFor="message"
+          className="text-left mb-1 text-gray-700 dark:text-white/80"
+        >
+          Message:
+        </label>
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          id="message"
+          className="mb-4 h-52 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="message"
           placeholder="Your message"
           required

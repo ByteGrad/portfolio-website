@@ -36,14 +36,16 @@ export default function Skills() {
       <div className="grid gap-y-10 gap-x-6 row-ga md:grid-cols-[auto_minmax(auto,_1fr)]">
       {
         skills.map(({ category, skills }) => {
+          const listId = `${category.replace(/\s/g, "-").toLowerCase()}-skills`;
+
           return (
             <React.Fragment key={category}>
               <div className="flex flex-shrink">
-                <label className="font-semibold capitalize">{category}</label>
+                <span className="font-semibold capitalize">{category}</span>
               </div>
 
               <div>
-              <ul className="flex flex-wrap gap-2 text-lg text-gray-800">
+              <ul id={listId} className="flex flex-wrap gap-2 text-lg text-gray-800">
                 {
                   skills.map((skill, index) => (
                     <motion.li
