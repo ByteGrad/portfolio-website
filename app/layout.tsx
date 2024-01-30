@@ -12,8 +12,8 @@ import ThemeContextProvider from "@/context/theme-context";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `${process.env.FULL_NAME} | Personal Portfolio`,
-  description: `${process.env.FULL_NAME} is a full-stack software engineer.`,
+  title: `${process.env.NEXT_PUBLIC_FULL_NAME} | Personal Portfolio`,
+  description: `${process.env.NEXT_PUBLIC_FULL_NAME} is a full-stack software engineer.`,
   formatDetection: {
     telephone: false,
     date: false,
