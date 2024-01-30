@@ -34,8 +34,7 @@ export default function Skills() {
       <SectionHeading>Skills</SectionHeading>
 
       <div className="grid gap-y-10 gap-x-6 row-ga md:grid-cols-[auto_minmax(auto,_1fr)]">
-      {
-        skills.map(({ category, skills }) => {
+        {skills.map(({ category, skills }) => {
           const listId = `${category.replace(/\s/g, "-").toLowerCase()}-skills`;
 
           return (
@@ -45,9 +44,11 @@ export default function Skills() {
               </div>
 
               <div>
-              <ul id={listId} className="flex flex-wrap gap-2 text-lg text-gray-800">
-                {
-                  skills.map((skill, index) => (
+                <ul
+                  id={listId}
+                  className="flex flex-wrap gap-2 text-lg text-gray-800"
+                >
+                  {skills.map((skill, index) => (
                     <motion.li
                       className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
                       key={skill}
@@ -61,14 +62,12 @@ export default function Skills() {
                     >
                       {skill}
                     </motion.li>
-                  ))
-                }
+                  ))}
                 </ul>
               </div>
             </React.Fragment>
-          )
-        })
-      }
+          );
+        })}
       </div>
     </section>
   );

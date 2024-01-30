@@ -17,14 +17,14 @@ const linkedinUsername = process.env.NEXT_PUBLIC_LINKEDIN_USERNAME;
 const githubUsername = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
 
 function getExperienceDuration() {
+  const startDate = experiencesData
+    .flatMap((item) => item.date)
+    .sort((a, b) => a.getTime() - b.getTime())[0];
+  const currentDate = new Date();
 
-  const startDate = experiencesData.flatMap((item) => item.date).sort((a, b) => a.getTime() - b.getTime())[0]
-  const currentDate = new Date()
+  const years = currentDate.getFullYear() - startDate.getFullYear();
 
-  const years = currentDate.getFullYear() - startDate.getFullYear()
-
-  return years
-
+  return years;
 }
 
 export default function Intro() {
@@ -80,11 +80,12 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         Hello, I'm{" "}
-        <span className="font-bold">
-          {process.env.NEXT_PUBLIC_FULL_NAME}
-        </span>.{" "}
-        I'm a <span className="font-bold">full-stack software engineer</span> with{" "}
-        <span className="font-bold">{getExperienceDuration()} years</span> of experience. I specialize in front-end technologies, and I'm especially proficient with <span className="font-bold">React</span> &amp; <span className="font-bold">TypeScript</span>.
+        <span className="font-bold">{process.env.NEXT_PUBLIC_FULL_NAME}</span>.{" "}
+        I'm a <span className="font-bold">full-stack software engineer</span>{" "}
+        with <span className="font-bold">{getExperienceDuration()} years</span>{" "}
+        of experience. I specialize in front-end technologies, and I'm
+        especially proficient with <span className="font-bold">React</span>{" "}
+        &amp; <span className="font-bold">TypeScript</span>.
       </motion.h1>
 
       <motion.div

@@ -3,7 +3,9 @@ export const validateString = (
   maxLength: number
 ): value is string => {
   return Boolean(
-    typeof value === "string" && value.trim().length && value.length <= maxLength
+    typeof value === "string" &&
+      value.trim().length &&
+      value.length <= maxLength
   );
 };
 

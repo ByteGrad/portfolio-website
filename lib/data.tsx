@@ -29,7 +29,8 @@ export const PageSections = {
   }
 } as const;
 
-export type SectionName = (typeof PageSections)[keyof typeof PageSections]["name"];
+export type SectionName =
+  (typeof PageSections)[keyof typeof PageSections]["name"];
 
 interface Experience {
   title: string;
@@ -40,7 +41,7 @@ interface Experience {
 }
 
 function getMonthYearDate({ month, year }: { month: number; year: number }) {
-  return new Date(year, month - 1, 0, 0, 0, 0, 0)
+  return new Date(year, month - 1, 0, 0, 0, 0, 0);
 }
 
 export const experiencesData: Experience[] = [
@@ -86,7 +87,10 @@ export const experiencesData: Experience[] = [
     description:
       "I was promoted to Senior Software Engineer, leading projects and influencing technical decisions.",
     // date: "Feb 2021 - Jan 2024",
-    date: [getMonthYearDate({ month: 2, year: 2021 }), getMonthYearDate({ month: 1, year: 2024 })],
+    date: [
+      getMonthYearDate({ month: 2, year: 2021 }),
+      getMonthYearDate({ month: 1, year: 2024 })
+    ],
     icon: <CgWorkAlt />
   }
 ];
@@ -163,7 +167,7 @@ export const skills: Skill[] = [
       "Code Reviews"
     ]
   }
-]
+];
 
 export const skillsData = [
   "HTML",

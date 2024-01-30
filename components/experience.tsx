@@ -16,7 +16,7 @@ function formatDate(date: Date) {
   return new Intl.DateTimeFormat("en-US", {
     month: "long",
     year: "numeric"
-  }).format(date)
+  }).format(date);
 }
 
 export default function Experience() {
@@ -24,7 +24,11 @@ export default function Experience() {
   const { theme } = useTheme();
 
   return (
-    <section id={PageSections.Experience.id} ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section
+      id={PageSections.Experience.id}
+      ref={ref}
+      className="scroll-mt-28 mb-28 sm:mb-40"
+    >
       <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
@@ -44,7 +48,11 @@ export default function Experience() {
                     ? "0.4rem solid #9ca3af"
                     : "0.4rem solid rgba(255, 255, 255, 0.5)"
               }}
-              date={Array.isArray(item.date) ? item.date.map(formatDate).join(" - ") : formatDate(item.date)}
+              date={
+                Array.isArray(item.date)
+                  ? item.date.map(formatDate).join(" - ")
+                  : formatDate(item.date)
+              }
               icon={item.icon}
               iconStyle={{
                 background:

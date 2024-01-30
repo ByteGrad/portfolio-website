@@ -75,7 +75,6 @@ export default function Contact() {
           placeholder="Your email"
         />
 
-
         <label
           htmlFor="message"
           className="text-left mb-1 text-gray-700 dark:text-white/80"
