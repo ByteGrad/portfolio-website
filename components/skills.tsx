@@ -50,7 +50,7 @@ export default function Skills() {
                 >
                   {skills.map((skill, index) => (
                     <motion.li
-                      className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+                      className="bg-white border border-black/10 rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
                       key={skill}
                       variants={fadeInAnimationVariants}
                       initial="initial"
