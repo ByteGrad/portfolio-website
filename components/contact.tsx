@@ -13,6 +13,8 @@ import { PageSections } from "@/lib/data";
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
 
+  const formRef = React.useRef<HTMLFormElement>(null);
+
   return (
     <motion.section
       id={PageSections.Contact.id}
@@ -42,6 +44,7 @@ export default function Contact() {
       </p>
 
       <form
+        ref={formRef}
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           const { error } = await sendEmail(formData);
@@ -52,6 +55,8 @@ export default function Contact() {
           }
 
           toast.success("Email sent successfully!");
+
+          formRef.current?.reset();
         }}
       >
         <input
