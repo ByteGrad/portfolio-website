@@ -75,7 +75,8 @@ export const experiencesData: Experience[] = [
   {
     title: "Software Engineer",
     location: "New York, NY",
-    description: "I moved to NYC and started working at a startup.",
+    description:
+      "I moved to NYC and started working at a startup, working on a SAAS product and learning skills to be a more well rounded software engineer.",
     // date: "December 2018",
     date: getMonthYearDate({ month: 12, year: 2018 }),
     icon: <CgWorkAlt />
@@ -85,7 +86,7 @@ export const experiencesData: Experience[] = [
     title: "Senior Software Engineer",
     location: "New York, NY",
     description:
-      "I was promoted to Senior Software Engineer, leading projects and influencing technical decisions.",
+      "I was promoted to Senior Software Engineer, leading projects and influencing technical decisions; this responsibility made me start thinking more critically about all aspects of the SDLC.",
     // date: "Feb 2021 - Jan 2024",
     date: [
       getMonthYearDate({ month: 2, year: 2021 }),
