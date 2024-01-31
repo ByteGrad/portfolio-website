@@ -31,7 +31,7 @@ export const PageSections = {
 export type SectionName =
   (typeof PageSections)[keyof typeof PageSections]["name"];
 
-interface Experience {
+export interface Experience {
   title: string;
   location: string;
   description: string;
