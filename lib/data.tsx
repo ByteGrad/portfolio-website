@@ -41,7 +41,7 @@ interface Experience {
 }
 
 function getMonthYearDate({ month, year }: { month: number; year: number }) {
-  return new Date(year, month - 1, 0, 0, 0, 0, 0);
+  return new Date(year, month - 1, 15, 0, 0, 0, 0);
 }
 
 export const experiencesData: Experience[] = [
