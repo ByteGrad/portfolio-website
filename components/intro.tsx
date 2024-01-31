@@ -15,6 +15,7 @@ import { PageSections, experiencesData } from "@/lib/data";
 
 const linkedinUsername = process.env.NEXT_PUBLIC_LINKEDIN_USERNAME;
 const githubUsername = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
+const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL;
 
 function getExperienceDuration() {
   const startDate = experiencesData
@@ -108,15 +109,17 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
-        <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 whitespace-nowrap"
-          href="https://tgrowden.github.io/resume/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View CV{" "}
-          <HiDocumentText className="opacity-60 group-hover:translate-x-1 transition" />
-        </a>
+        {Boolean(resumeUrl) && (
+          <a
+            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 whitespace-nowrap"
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View CV{" "}
+            <HiDocumentText className="opacity-60 group-hover:translate-x-1 transition" />
+          </a>
+        )}
 
         {Boolean(linkedinUsername) && (
           <a
