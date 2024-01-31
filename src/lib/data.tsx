@@ -1,5 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
+import { StaticImageData } from "next/image";
 
 export const PageSections = {
   Home: {
@@ -99,7 +100,7 @@ interface ProjectData {
   title: string;
   description: string;
   tags: string[];
-  // imageUrl: StaticImageData;
+  imageUrl: StaticImageData;
 }
 
 export const projectsData: ProjectData[] = [
