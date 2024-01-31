@@ -29,7 +29,7 @@ function getExperienceDuration() {
 }
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
+  const { ref } = useSectionInView("Home", { threshold: 0.5 });
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (

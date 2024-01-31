@@ -7,7 +7,7 @@ import {
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiencesData, Experience } from "@/lib/data";
+import { experiencesData, Experience as ExperienceItem } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme, Theme } from "@/context/theme-context";
 import SectionHeading from "./section-heading";
@@ -24,7 +24,7 @@ function ExperienceElement({
   experience,
   theme
 }: {
-  experience: Experience;
+  experience: ExperienceItem;
   theme: Theme;
 }) {
   const { ref, inView } = useInView({
@@ -71,7 +71,7 @@ function ExperienceElement({
 }
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", { threshold: 0.5 });
   const { theme } = useTheme();
 
   return (
