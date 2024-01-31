@@ -10,7 +10,7 @@ import { FaGithubSquare } from "react-icons/fa";
 
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import Headshot from "@/public/headshot.jpeg";
+// import Headshot from "@/public/headshot.jpeg";
 import { PageSections, experiencesData } from "@/lib/data";
 
 const linkedinUsername = process.env.NEXT_PUBLIC_LINKEDIN_USERNAME;
@@ -49,7 +49,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src={Headshot}
+              src={"/headshot.jpeg"}
               alt={`${process.env.NEXT_PUBLIC_FULL_NAME} portrait`}
               width="192"
               height="192"
