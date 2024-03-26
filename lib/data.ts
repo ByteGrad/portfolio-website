@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import wisevoyage from "@/public/wisevoyage.png";
+import thriftique from "@/public/thriftique.png";
+import todoList from "@/public/todo-list.png";
 
 export const links = [
   {
@@ -62,25 +62,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "WiseVoyage",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I worked as a full-stack developer on this startup project for 2 weeks. It's a travel app that helps you plan your trips with AI generation.",
+    tags: ["Ruby on Rails", "StumulusJS", "SQL", "Gemini", "Prompting", "Deployment"],
+    imageUrl: wisevoyage,
   },
   {
-    title: "rmtDev",
+    title: "Thriftique",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Second hand marketplace. Full-stack developer. It has features like filtering, advanced search options and use of map API.",
+    tags: ["Ruby", "MVC", "Sass", "Mapbox", "Heroku", "PostgreSQL", "Cloudstorage"],
+    imageUrl: thriftique,
   },
   {
-    title: "Word Analytics",
+    title: "ToDo List",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    tags: ["JavaScript", "CSS", "HTML", "JSON", "Responsive Design", "Bootstrap"],
+    imageUrl: todoList,
   },
 ] as const;
 
@@ -89,12 +89,13 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
+  "Ruby",
+  "Rails",
   "React",
   "Next.js",
-  "Node.js",
+  "PHP",
   "Git",
-  "Tailwind",
-  "Prisma",
+  "Sass",
   "MongoDB",
   "Redux",
   "GraphQL",
@@ -104,4 +105,6 @@ export const skillsData = [
   "Python",
   "Django",
   "Framer Motion",
+  "MySQL",
+
 ] as const;
