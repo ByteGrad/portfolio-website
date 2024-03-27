@@ -35,31 +35,32 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Self Taught Developer",
+    location: "Leiria, Portugal",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Began the habit of carving out time everyday to code. This is where I learned the basics of web development. I started with HTML, CSS and JavaScript in a JavaScript online course.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2022-2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "React Front-End Course",
+    location: "Amsterdam, Netherlands",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Spent 6 months learning React. I built a few projects and did a lot of Kata's on Codewars. I learned about state management, hooks, context, and more. I also learned about Next.js.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023",
+  },
+  {
+    title: "Bootcamp Graduate",
+    location: "Amsterdam, Netherlands",
+    description:
+      "I graduated from a coding bootcamp in Amsterdam. I learned Ruby, Ruby on Rails, JavaScript, SQL, API use and more. I built a few projects and learned about TDD, Agile, and more.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024",
   },
 ] as const;
 
+//  React.createElement(CgWorkAlt)
 export const projectsData = [
   {
     title: "WiseVoyage",
@@ -96,15 +97,9 @@ export const skillsData = [
   "PHP",
   "Git",
   "Sass",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
+  "Docker",
+  "PHP",
+  "Symfony",
   "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
   "MySQL",
-
 ] as const;
