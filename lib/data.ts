@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import wisevoyage from "@/public/wisevoyage.png";
+import thriftique from "@/public/thriftique.png";
+import todoList from "@/public/todo-list.png";
 
 export const links = [
   {
@@ -35,52 +35,53 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Self Taught Developer",
+    location: "Leiria, Portugal",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Began the habit of carving out time everyday to code. This is where I learned the basics of web development. I started with HTML, CSS and JavaScript in a JavaScript online course.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2022-2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "React Front-End Course",
+    location: "Amsterdam, Netherlands",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Spent 6 months learning React. I built a few projects and did a lot of Kata's on Codewars. I learned about state management, hooks, context, and more. I also learned about Next.js.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023",
+  },
+  {
+    title: "Bootcamp Graduate",
+    location: "Amsterdam, Netherlands",
+    description:
+      "I graduated from a coding bootcamp in Amsterdam. I learned Ruby, Ruby on Rails, JavaScript, SQL, API use and more. I built a few projects and learned about TDD, Agile, and more.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024",
   },
 ] as const;
 
+//  React.createElement(CgWorkAlt)
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "WiseVoyage",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I worked as a full-stack developer on this startup project for 2 weeks. It's a travel app that helps you plan your trips with AI generation.",
+    tags: ["Ruby on Rails", "StumulusJS", "SQL", "Gemini", "Prompting", "Deployment"],
+    imageUrl: wisevoyage,
   },
   {
-    title: "rmtDev",
+    title: "Thriftique",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Second hand marketplace. Full-stack developer. It has features like filtering, advanced search options and use of map API.",
+    tags: ["Ruby", "MVC", "Sass", "Mapbox", "Heroku", "PostgreSQL", "Cloudstorage"],
+    imageUrl: thriftique,
   },
   {
-    title: "Word Analytics",
+    title: "ToDo List",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    tags: ["JavaScript", "CSS", "HTML", "JSON", "Responsive Design", "Bootstrap"],
+    imageUrl: todoList,
   },
 ] as const;
 
@@ -89,19 +90,16 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
+  "Ruby",
+  "Rails",
   "React",
   "Next.js",
-  "Node.js",
+  "PHP",
   "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
+  "Sass",
+  "Docker",
+  "PHP",
+  "Symfony",
   "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "MySQL",
 ] as const;
